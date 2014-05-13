@@ -4,7 +4,11 @@ import type (
 	clojure.lang.{Ratio, IPersistentVector, APersistentMap}
 )
 
-var Printf = printf
+var (
+	Printf = printf
+	Print = print
+)
+
 
 func stripZeroAfterDecimal(s) { string.replace(str(s), /^([1-9][0-9]*)\.0$/, "$1") }
 
