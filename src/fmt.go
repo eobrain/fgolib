@@ -1,8 +1,7 @@
 package fmt
 import "clojure/string"
 import type (
-	clojure.lang.Ratio
-	clojure.lang.PersistentVector
+	clojure.lang.{Ratio, IPersistentVector, APersistentMap}
 )
 
 var Printf = printf
@@ -16,12 +15,19 @@ func toStringLikeGo(x) {
 	case String:           x
 	case Ratio:            str(int(x))
 	case Number:           stripZeroAfterDecimal(x)
-	case PersistentVector: str(
+	case IPersistentVector: str(
 		"[", 
 		" " string.join (toStringLikeGo map x),
 		"]"
 	)
+        case APersistentMap:
+		str("map[",
+			" " string.join	(for [key, val] := lazy x {
+				str(toStringLikeGo(key), ":", toStringLikeGo(val))
+			})
+		, "]")
 	default:               str(x)
+	//default:               str(x->getClass(), ":", x)
 	}
 }
 

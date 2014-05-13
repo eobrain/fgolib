@@ -1,6 +1,7 @@
 package tour_test
 
 import (
+	test "midje/sweet"
 	m1 "tour1/main"
 	m6 "tour6/main"
 	m7 "tour7/main"
@@ -14,7 +15,7 @@ import (
 	m25 "tour25/main"
 	m26 "tour26/main"
 	m31 "tour31/main"
-	test "midje/sweet"
+	m40 "tour40/main"
 )
 
 
@@ -47,5 +48,7 @@ test.fact("tour26", withOutStr(m26.main()), =>, `{1 2}
 `)
 test.fact("tour31", withOutStr(m31.main()), =>, `Hello World
 [Hello World]
+`)
+test.fact("tour40", withOutStr(m40.main()), =>, `map[Bell Labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
 `)
 
