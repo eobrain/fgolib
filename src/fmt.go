@@ -36,6 +36,6 @@ func toStringLikeGo(x) {
 }
 
 func Println(args...) {
-	const as = func{toStringLikeGo(..)} map args
+	const as = func{toStringLikeGo($1)} map args
 	println(" " string.join as)
 }

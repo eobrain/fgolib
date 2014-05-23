@@ -17,6 +17,7 @@ import (
 	m31 "tour31/main"
 	m40 "tour40/main"
 	m47 "tour47/main"
+	// m52 "tour52/main"
 )
 
 
