@@ -5,10 +5,14 @@ import type (
 )
 
 func Dial(network, address) {
-	const(
-		socket = new Socket("127.0.0.1", 1234)
-		out = new PrintWriter(socket->getOutputStream(), true)
-		in = new BufferedReader(new InputStreamReader(socket->getInputStream()))
-	)
-	[in, out]
+	try {
+		const(
+			socket = new Socket("127.0.0.1", 1234)
+			out = new PrintWriter(socket->getOutputStream(), true)
+			in = new BufferedReader(new InputStreamReader(socket->getInputStream()))
+		)
+		[in, out]
+	} catch Exception e {
+		e
+	}
 }

@@ -4,5 +4,9 @@ import type (
 )
 
 func Open(path String){
-	new FileInputStream(path)
+	try {
+		new FileInputStream(path)
+	} catch Exception e {
+		e
+	}
 }
