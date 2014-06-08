@@ -7,6 +7,7 @@ import type (
 var (
 	Printf = printf
 	Print = print
+	Sprint = str
 )
 
 
