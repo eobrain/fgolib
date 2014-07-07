@@ -5,11 +5,13 @@ of code from Go to [Functional Go][fgo].
 
 ## Usage
 
-Include this in the `:dependencies` section of your `project.clj`
-file.
+[![Clojars Project](http://clojars.org/org.eamonn.funcgo/fgolib/latest-version.svg)](http://clojars.org/org.eamonn.funcgo/fgolib)
+
+Include this (or the latest version on clojars as shown above) in the
+`:dependencies` section of your `project.clj` file.
 
     :dependencies [...
-                   [org.eamonn.funcgo/fgolib "0.2.0"]
+                   [org.eamonn.funcgo/fgolib "0.2.5"]
                    ...]
 
 ## License

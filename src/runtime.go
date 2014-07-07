@@ -1,4 +1,4 @@
 package runtime
 
-GOOS := "clojure"
+var GOOS = "clojure"
 
