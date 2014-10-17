@@ -22,12 +22,12 @@ func toStringLikeGo(x) {
 	case Number:           stripZeroAfterDecimal(x)
 	case IPersistentVector: str(
 		"[", 
-		" " string.join (toStringLikeGo map x),
+		" "  string.join  (toStringLikeGo  map  x),
 		"]"
 	)
         case APersistentMap:
 		str("map[",
-			" " string.join	(for [key, val] := lazy x {
+			" "  string.join  (for [key, val] := lazy x {
 				str(toStringLikeGo(key), ":", toStringLikeGo(val))
 			})
 		, "]")
@@ -37,6 +37,6 @@ func toStringLikeGo(x) {
 }
 
 func Println(args...) {
-	const as = func{toStringLikeGo($1)} map args
-	println(" " string.join as)
+	const as = func{toStringLikeGo($1)}  map  args
+	println(" "  string.join  as)
 }
